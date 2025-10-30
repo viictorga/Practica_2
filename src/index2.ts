@@ -1,5 +1,5 @@
 import express from "express"
-import axios from "axios"
+
 import cors from "cors"
 
 
@@ -44,7 +44,7 @@ app.post("/api/books", (req, res)=>{
 
     }
         libros.push(nuevoLibro)
-        res.status(201).json(libros);
+        res.status(201).json(nuevoLibro);
     }
     else{
         if(typeof(newTitle) !== "string"){
